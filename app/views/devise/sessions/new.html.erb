@@ -1,60 +1,32 @@
-<!-- <div class="container"> -->
-<!--     <div class="row">
-      <div class="col-sm-6"> <h2>Log in dsfsdfsd</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<div class="background">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-horizontal") do |f| %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div id="legend" class="register">
+      <legend class="reg-legend">Login</legend>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-</div>  
-    </div>
-
-
-
-</div> -->
-
-<form class="form-horizontal">
-  <div class="register">
-    <h1 class="text-uppercase">
-      <strong>Login</strong>
-    </h1>
-   
-  </div>
-  <div style="text-align:center;">
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label labels">Email</label>
-      <div class="">
-        <input type="text" class="form-control" placeholder="Email" id="staticEmail">
+    <div style="text-align:center;">
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label labels">Email</label>
+        <div class="">
+        <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Email" %>
+          <!-- <input type="text" class="form-control" placeholder="Email" id="staticEmail"> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label labels">Password</label>
+        <div class="">
+          <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password" %>
+          <!-- <input type="password" class="form-control" id="inputPassword" placeholder="Password"> -->
+        </div>
       </div>
     </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label labels">Password</label>
-      <div class="">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-      </div>
-    </div>
+    <div class="form-group">
+    <!-- Button -->
+    <%= f.submit "Log in", class:"btn btn-success reg-btn" %>
+    
+    <!-- <button class="btn btn-success reg-btn">Login</button> -->
   </div>
-</form>
-<div class="form-group">
-  <!-- Button -->
+  <% end %>
   
-  <button class="btn btn-success reg-btn">Login</button>
 </div>
