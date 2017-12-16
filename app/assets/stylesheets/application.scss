@@ -16,3 +16,51 @@
 
 
 @import "bootstrap";
+
+body{
+	background-color: #514340;
+}
+
+.input-width{
+	width: 218px;
+}
+
+.mb-50{
+	margin-bottom: 50px;
+}
+
+.register{
+  /* margin-left: 207px; */
+  height: 200px;
+  /*background-color: beige;*/
+  /* vertical-align: middle; */
+  text-align: center;
+  margin-bottom: 40px;
+  background-image: url("https://static.pexels.com/photos/257897/pexels-photo-257897.jpeg");
+}
+
+.reg-legend{
+  padding-top: 70px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+.register:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 16%;
+  border: 19px solid transparent;
+  border-top-color: #D9D9D9;
+  top: 200px;
+}
+
+.reg-btn{
+	margin-left:207px;
+}
+
+.labels{
+  font-weight: bold;
+  color: white;
+}

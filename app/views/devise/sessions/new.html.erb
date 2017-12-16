@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<!-- <div class="container"> -->
+<!--     <div class="row">
       <div class="col-sm-6"> <h2>Log in dsfsdfsd</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -29,4 +29,32 @@
 
 
 
+</div> -->
+
+<form class="form-horizontal">
+  <div class="register">
+    <h1 class="text-uppercase">
+      <strong>Login</strong>
+    </h1>
+   
+  </div>
+  <div style="text-align:center;">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label labels">Email</label>
+      <div class="">
+        <input type="text" class="form-control" placeholder="Email" id="staticEmail">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label labels">Password</label>
+      <div class="">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      </div>
+    </div>
+  </div>
+</form>
+<div class="form-group">
+  <!-- Button -->
+  
+  <button class="btn btn-success reg-btn">Login</button>
 </div>
