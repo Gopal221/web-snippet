@@ -1,8 +1,6 @@
 class Api::V1::SnippetController < Api::V1::ApplicationController
 	before_action :find_user
-
-
-
+  
   def index
       if @user
         render json: {
@@ -65,7 +63,7 @@ class Api::V1::SnippetController < Api::V1::ApplicationController
 	private
 
 	def find_user
-    @user = Api.where(access_token: params[:access_token]).first.user || current_user
+    @user = Api.where(access_token: params[:access_token]).first.user rescue current_user
   end
 
  

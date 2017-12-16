@@ -20,5 +20,17 @@ class Api::V1::UserController < Api::V1::ApplicationController
     
   end
 
+  def get_token
+    if @user = current_user
+        render json: @user.try(:api)
+    else
+      render json: {
+          success: false,
+          message: "Invalid Access"
+        }
+    end
+    
+  end
+
 
 end
