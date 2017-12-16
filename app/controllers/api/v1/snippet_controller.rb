@@ -3,7 +3,7 @@ class Api::V1::SnippetController < Api::V1::ApplicationController
 
 
 
-  def method_name
+  def index
       if @user
         render json: Snippet.all
       else
