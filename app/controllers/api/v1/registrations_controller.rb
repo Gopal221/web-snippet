@@ -7,7 +7,7 @@ class Api::V1::RegistrationsController < Api::V1::ApplicationController
       render json: {
        success: true,
        message: "successfully signup",
-       access_token:  generate_access_token(params[:user_id], @user.id).access_token
+       access_token:  generate_access_token(@user.id).access_token
       }
     else
       render json: {

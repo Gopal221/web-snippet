@@ -6,6 +6,13 @@ Rails.application.routes.draw do
     namespace :v1 do
     	resources :registrations,:only => [:create]
       resources :sessions, :only => [:create, :destroy]
+      resources :snippet
+      resources :permission
+      resources :user do
+      	collection do
+          post :create_token
+        end
+      end
     end
   end
 end

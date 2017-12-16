@@ -6,10 +6,9 @@ class Api::V1::ApplicationController < ActionController::Base
 	end
 
 
-  def generate_access_token(user_id, device_id)
-    Api.create({
+  def generate_access_token(user_id)
+    Api.create(
       access_token: (Digest::SHA1.hexdigest "#{Time.now.to_i}#{1}"),
-      user_id: user_id
-    })
+      user_id: user_id)
   end
 end

@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171216061918) do
+ActiveRecord::Schema.define(version: 20171216065131) do
 
   create_table "apis", force: :cascade do |t|
     t.string "access_token"
     t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "permissions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "snippet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["snippet_id"], name: "index_permissions_on_snippet_id"
+    t.index ["user_id"], name: "index_permissions_on_user_id"
   end
 
   create_table "snippets", force: :cascade do |t|
