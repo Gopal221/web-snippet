@@ -1,6 +1,20 @@
 class Api::V1::SnippetController < Api::V1::ApplicationController
 	before_action :find_user
 
+
+
+  def method_name
+      if @user
+        render json: Snippet.all
+      else
+        render json: {
+          success: false,
+          message: "Invalid Access"
+        }
+      end
+    
+  end
+
 	def create
 		if @user
 			@snippet = Snippet.new(snippet_params.merge(user_id: @user.try(:id)))
