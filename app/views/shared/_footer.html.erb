@@ -4,38 +4,28 @@
         <div class="row">
 
           <div class="col-lg-6 col-xs-12 text-lg-left text-center">
-            <p class="copyright-text">
-            </p>
-            <div class="credits">
-              <a href="https://bootstrapmade.com/">Bootstrap Templates</a> by BootstrapMade
-            </div>
           </div>
 
           <div class="col-lg-6 col-xs-12 text-lg-right text-center">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
               </li>
-
+              <%if user_signed_in?%>
+                <%= link_to "Sign Out", "/users/sign_out", method: :delete%>
+              <%else%>
               <li class="list-inline-item">
-                <a href="#about">About Us</a>
+                <a href="/users/sign_in">Already A User?</a>
               </li>
-
+               <li class="list-inline-item">
+                <a href="/users/sign_up">Register</a>
+              </li>
               <li class="list-inline-item">
-                <a href="#features">Features</a>
+                <a href="https://github.com/Afzal7/syncrow/blob/master/README.md">How It Works?</a>
               </li>
+              <%end%>
 
-              <li class="list-inline-item">
-                <a href="#portfolio">Portfolio</a>
-              </li>
-
-              <li class="list-inline-item">
-                <a href="#team">Team</a>
-              </li>
-
-              <li class="list-inline-item">
-                <a href="#contact">Contact</a>
-              </li>
+             
             </ul>
           </div>
 

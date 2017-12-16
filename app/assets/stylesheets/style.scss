@@ -16,7 +16,8 @@ p {
 }
 
 h1 {
-  font-size: 62px;
+  font-size: 42px;
+  font-family: 'Krona One', sans-serif;
 }
 
 h2 {
@@ -153,7 +154,7 @@ a:hover {
 
 .tagline {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 26px;
+  font-size: 18px;
   margin: 45px 0 75px 0;
   color: #fff;
 }
@@ -840,8 +841,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   Footer Styling
   ================================================== */
 .site-footer {
-  background-color: #111;
-  padding: 0;
+      background-color: #111;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .site-footer h2, .site-footer p {

@@ -17,3 +17,8 @@
 //= require turbolinks
 //= require angular
 //= require_tree .
+
+$(document).ready(function(){
+	$(".hero").css('height', $(window).height() - 65px)
+});
+
