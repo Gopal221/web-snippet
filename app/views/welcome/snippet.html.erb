@@ -36,7 +36,7 @@
 			    <tr ng-repeat="snippet in allSnippets">
 			      <th scope="row">{{snippet.id}}</th>
 			      <td>{{snippet.name}}</td>
-			      <td data-toggle="modal" data-target="#myModal">{{snippet.content | limitTo: 70}}</td>
+			      <td style="cursor: pointer;"><span data-toggle="modal" data-target="#contentModal">{{snippet.content | limitTo: 70}}</span></td>
 			      <!-- <td>
 			      	<button class="btn btn-primary">Edit</button>
 			      	<button class="btn btn-primary">Delete</button>
@@ -46,6 +46,21 @@
 			</table>
 		</div>
 	</div>
+
+	<div class="modal fade" id="contentModal" role="dialog">
+    <div class="modal-dialog">
+    
+    	<!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title">Snippet Content</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Some text in the modal.</p>
+	      </div>
+	    </div>
+   	</div>
+  </div>
 	
 	<div class="tab-pane" id="sharedsnippet" role="tabpanel">
 		<div class="table-snippet">
