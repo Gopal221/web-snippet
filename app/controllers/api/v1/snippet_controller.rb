@@ -17,7 +17,7 @@ class Api::V1::SnippetController < Api::V1::ApplicationController
 
 	def create
 		if @user
-			@snippet = Snippet.new(snippet_params.merge(user_id: @user.try(:id)))
+			@snippet = Snippet.new(name: params[:name], content: params[:content],user_id: @user.try(:id))
 			if @snippet.save
 				render json: @snippet
 			else
@@ -65,8 +65,6 @@ class Api::V1::SnippetController < Api::V1::ApplicationController
     @user = Api.where(access_token: params[:access_token]).first.user || current_user
   end
 
-  def snippet_params
-    params.require(:snippet).permit(:name, :content)   
-  end
+ 
 
 end
