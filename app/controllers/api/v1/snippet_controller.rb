@@ -3,15 +3,9 @@ class Api::V1::SnippetController < Api::V1::ApplicationController
   
   def index
       if @user
-        render json: {
-          data: Snippet.all,
-          success: true
-        }
+        render json: Snippet.all
       else
-        render json: {
-          success: false,
-          message: "Invalid Access"
-        }
+        render json: []
       end
     
   end
