@@ -18,7 +18,8 @@ Rails.application.routes.draw do
       resources :permission
       resources :user do
       	collection do
-          post :create_token
+          get :create_token
+          get :get_token
         end
       end
     end
