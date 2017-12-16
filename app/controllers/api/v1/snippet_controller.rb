@@ -5,7 +5,10 @@ class Api::V1::SnippetController < Api::V1::ApplicationController
 
   def index
       if @user
-        render json: Snippet.all
+        render json: {
+          data: Snippet.all,
+          success: true
+        }
       else
         render json: {
           success: false,
